@@ -10,10 +10,10 @@ const resolvers = {
           .select('-__v -password')
           .populate('thoughts')
           .populate('friends');
-
+    
         return userData;
       }
-
+    
       throw new AuthenticationError('Not logged in');
     },
     users: async () => {
